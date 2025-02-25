@@ -1,19 +1,18 @@
-function salvarNome() {
-    var nome = document.getElementById('inputNome').value;
-    localStorage.setItem('nome', nome);
-
+function salvarTarefa() {
+    var tarefa = document.getElementById('inputTarefa').value;  // A variável correta é "tarefa"
+    localStorage.setItem('tarefa', tarefa);  // Agora estamos usando a variável correta
 }
 
-function mostraNome() {
-    var nome = localStorage.getItem('nome');
-    if (nome) {
-        document.getElementById('resultado').textContent = `Nome salvo: ${nome}`;
+function mostrarTarefa() {
+    var tarefa = localStorage.getItem('tarefa');  // Certifique-se de pegar o valor de "tarefa"
+    if (tarefa) {
+        document.getElementById('resultado').textContent = `Tarefa salva: ${tarefa}`;
     } else {
-        document.getElementById('resultado').textContent = "Nenhum valor de nome";
+        document.getElementById('resultado').textContent = "Nenhuma tarefa salva";
     }
 }
 
-function limparNome() {
-    localStorage.removeItem('nome');
-    document.getElementById('resultado').textContent = "Nome removido"
+function limparTarefa() {
+    localStorage.removeItem('tarefa');
+    document.getElementById('resultado').textContent = "Tarefa removida";
 }

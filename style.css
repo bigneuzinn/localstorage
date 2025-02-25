@@ -10,31 +10,39 @@ body {
     background-color: #f4f4f4;
     color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    justify-content: center;
+    padding: 20px;
 }
 
 h1 {
-    text-align: center;
     color: #4CAF50;
     margin-bottom: 20px;
 }
 
-#inputNome {
+div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputTarefa {
     padding: 10px;
     font-size: 16px;
-    width: 250px;
+    width: 300px;
     margin-right: 10px;
     border: 2px solid #ddd;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
@@ -47,10 +55,31 @@ button:hover {
     background-color: #45a049;
 }
 
-#resultado {
+#listaTarefas {
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
     margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-    color: #555;
-    font-weight: bold;
+}
+
+#listaTarefas li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+#listaTarefas li button {
+    background-color: #f44336;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#listaTarefas li button:hover {
+    background-color: #e53935;
 }
